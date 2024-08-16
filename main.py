@@ -78,7 +78,7 @@ elif chart_type == 'Box Plot':
 #mostrar a distribuição das especies no dataseet
 elif chart_type == 'Pie Chart':
     species_count = iris_df['species'].value_counts().reset_index()
-    fig = px.pies(species_count, values='species', names='index', title='Iris Species Distribution')
+    fig = px.pie(species_count, values='species', names='index', title='Iris Species Distribution')
     st.plotly_chart(fig)
 
 # criar a 3D scatter plot showing the sepal length, sepal width, and petal length, colored by species
