@@ -1,6 +1,7 @@
 import streamlit as st
 import plotly.express as px
 
+
 # Set the app title
 st.title('My First Streamlit App')
 # Add a welcome message
@@ -16,3 +17,10 @@ print (iris_df.head())
 
 st.subheader("Iris Dataset")
 st.dataframe(iris_df)
+
+basic_scatter_plot = px.scatter(iris_df, x='sepal_width', y='sepal_length')
+st.subheader("Iris Dataset: Basic Scatter Plot")
+st.plotly_chart(basic_scatter_plot)
+
+
+
