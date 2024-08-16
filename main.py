@@ -33,5 +33,15 @@ colored_buble_hover_fig = px.scatter(iris_df, x=x_axis, y=y_axis, color='species
 
 #mostrar a figura em streamlit
 st.subheader('Iris Dataset: Buble Chart with Selectable Axes')
+
+colored_buble_hover_fig.update_layout(
+    font_family="Courier New",
+    title = 'Iris Dataset Buble Chart',
+    xaxis_title=x_axis,
+    yaxis_title=y_axis,
+    legend_title='Species'
+)
+
 st.plotly_chart(colored_buble_hover_fig)
+
 
